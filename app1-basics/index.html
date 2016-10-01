@@ -1,6 +1,10 @@
-<html>
-	<body>
-	
+<html ng-app="appOne">
+	<body ng-controller="mainControl">
+
+		<input type="text" placeholder="Full Name" onfocus="this.placeholder =''" onblur="this.placeholder = 'Full Name'" ng-model="fullname">
+
+		<p>{{fullname}}</p>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
