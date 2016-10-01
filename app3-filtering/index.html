@@ -1,6 +1,16 @@
-<html>
-	<body>
-		Something
+<html ng-app="appThree">
+	<body ng-controller="mainController">
+
+<h3>Find Employees</h3>
+<input placeholder="Employee Name" onfocus="this.placeholder=''" onblur="this.placeholder='Employee Name'" ng-model="personFilter.name">
+<input placeholder="Date Employed" onfocus="this.placeholder=''" onblur="this.placeholder='Date Employed'" ng-model="personFilter.dateEmployed">
+
+<div ng-repeat = "person in myData | filter: personFilter">
+	<span>{{person.name}}</span>
+	<span>{{person.email}}</span>
+	<span>{{person.dateEmployed}}</span>
+</div>
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
